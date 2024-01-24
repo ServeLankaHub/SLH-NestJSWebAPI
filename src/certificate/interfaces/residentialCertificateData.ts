@@ -1,6 +1,5 @@
 import { CivilStatus } from '../enums/CivilStatus';
 import { District } from '../enums/District';
-import { Nationality } from '../enums/Nationality';
 import { Religion } from '../enums/Religion';
 
 export interface ResidentialCertificateDataI {
@@ -10,7 +9,7 @@ export interface ResidentialCertificateDataI {
     dob: string;
     age: number;
     civilStatus: CivilStatus;
-    nationality: Nationality;
+    isSriLankan: boolean;
     religion: Religion;
     occupation: string;
     dateOfResidence: string;
