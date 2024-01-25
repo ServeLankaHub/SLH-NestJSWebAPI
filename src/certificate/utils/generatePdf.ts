@@ -1,13 +1,16 @@
+import { ResidentialCertificateDataI } from '../interfaces/residentialCertificateData';
 import { ResidentialTemplate } from './ResidentialTemplate';
 
-export const generatePdf = async () => {
+export const generatePdf = async (data: ResidentialCertificateDataI) => {
     const doc = new ResidentialTemplate();
-    console.log('doc :', doc);
 
-    doc.firstName = 'Sujeewa';
-    doc.secondName = 'Sandeepa';
+    doc.firstName = data.fullName;
+    doc.secondName = data.district;
 
-    await doc.fill(
+    const generatedDoc = await doc.fill(
         '/Users/macbook/serve-lanka-hub/SLH-NestJSWebAPI/src/certificate/utils/files/doc.pdf',
     );
+    if (generatedDoc) {
+        console.log('PDF generated successfully!');
+    }
 };

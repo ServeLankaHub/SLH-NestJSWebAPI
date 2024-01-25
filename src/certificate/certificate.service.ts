@@ -7,6 +7,6 @@ export class CertificateService {
     async residentialCertificate(
         data: ResidentialCertificateDataI,
     ): Promise<void> {
-        generatePdf();
+        generatePdf(data);
     }
 }
