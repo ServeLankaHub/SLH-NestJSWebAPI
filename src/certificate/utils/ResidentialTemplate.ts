@@ -23,13 +23,13 @@ export class ResidentialTemplate extends PdfFiller {
     @PdfField()
     civilStatus: string;
     @PdfField()
-    isSriLankan: boolean;
+    isSriLankan: string;
     @PdfField()
     religion: string;
     @PdfField()
     occupation: string;
     @PdfField()
-    dateOfResidence: string;
+    periodOfResidence: number;
     @PdfField()
     noOfElectoralRegister: number;
     @PdfField()
@@ -47,5 +47,19 @@ export class ResidentialTemplate extends PdfFiller {
     @PdfField()
     divisionalSecretariatsDiv: string;
     @PdfField()
-    certificateType: string;
+    date: string;
+    @PdfField()
+    sex: string;
+    @PdfField()
+    sinceWhenKnown: string;
+    @PdfField()
+    personallyKnown: string;
+    @PdfField()
+    convictedByCourtOfLaw: string;
+    @PdfField()
+    takenPartInPublicActivities: string;
+    @PdfField()
+    character: string;
+    @PdfField()
+    remark: string;
 }

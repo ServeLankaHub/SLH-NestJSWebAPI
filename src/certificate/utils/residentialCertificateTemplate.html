@@ -17,18 +17,23 @@
       <ol>
           <li>
               <ol type='a'>
-                  <li>District and Divisional Secretary's Division</li>
+                  <li>District and Divisional Secretary's Division:
+                    <span class="answer-normal">%%district%%/%%divisionalSecretariatsDiv%%</span>
+                  </li>
                   <hr/>
                   <li>
-                      Grama Niladhari Division and Number
+                      Grama Niladhari Division and Number:
+                      <span class="answer-normal">%%gramaNiladhariDivName%%/%%gramaNiladhariDivNum%%</span>
                   </li>
                   <hr/>
                   <li>
                       Whether applicant is personally known to the Grama Niladhari?
+                      <span class="answer-normal">%%personallyKnown%%</span>
                   </li>
                   <hr/>
                   <li>
                       If so, since when?
+                      <span class="answer-normal">%%sinceWhenKnown%%</span>
                   </li>
                   <hr/>
               </ol>
@@ -37,54 +42,82 @@
               Information about Applicant
               <ol type='a'>
                   <li>
-                      Name and Address
+                      Name and Address:
+                      <span id="nameAndAdress-ans">
+                        <div>%%fullName%%,</div>
+                        <div>%%address%%</div>
+                      </span>
                   </li>
                   <hr/>
                   <li>
-                      Sex
+                      Sex:
+                      <span class="answer-normal">%%sex%%</span>
                   </li>
                   <hr/>
                   <li>
-                      <table>
-                          <tr>
-                              <td>Age</td>
-                              <td id='civilStatus'>Civil Status</td>
-                          </tr>
-                      </table>
-                  </li>
+                    <span>
+                      Age:
+                      <span class="answer-normal">%%age%%</span>
+                    </span>
+                    <span class="same-row">
+                      Civil Status:
+                      <span class="answer-normal">
+                        %%civilStatus%%</span>
+                    </span>
                   <hr/>
                   <li>
-                      <table>
-                        <tr>
-                            <td>Whether Sri Lankan?</td>
-                            <td id='religion'>Religion</td>
-                          </tr>
-                      </table>
+                    <span>
+                      Whether Sri Lankan?
+                      <span class="answer-normal">%%isSriLankan%%</span>
+                    </span>
+                    <span class="same-row">
+                      Religion:
+                      <span class="answer-normal">
+                        %%religion%%</span>
+                    </span>
                       <hr/>
                   </li>
                   <li>
-                      Present Occupation
+                      Present Occupation:
+                      <span class="answer-normal">
+                        %%occupation%%
+                      </span>
                   </li>
                   <hr/>
                   <li>
-                      Period of residence in the village
+                      Period of residence in the village:
+                      <span class="answer-normal">%%periodOfResidence%%</span>
                   </li>
                   <hr/>
                   <ol type='I'>
-                      <li>National Identity Card No.</li>
+                      <li>National Identity Card No:
+                        <span class="answer-normal">
+                          %%nic%%
+                        </span>
+                      </li>
                       <hr/>
-                      <li>Number of the Electoral Register and Particulars of Registration</li>
+                      <li>Number of the Electoral Register and Particulars of Registration:
+                        <span class="answer-normal">
+                          %%noOfElectoralRegister%%
+                        </span>
+                      </li>
                       <hr/>
                   </ol>
                   <li>
-                      Name and Address of the father
+                      Name and Address of the father:
+                      <span class="answer-normal">
+                        %%nameOfFather%%, %%addressOfFather%%
+                      </span>
                   </li>
                   <hr/>
                   <li>
-                      Purpose for which the certificate is required
+                      Purpose for which the certificate is required:
+                      <span class="answer-normal">
+                        %%purposeOfCertificate%%
+                      </span>
                   </li>
                   <hr/>
-                  <li>
+                  <li id="usual-signature">
                       Usual Signature
                   </li>
                   <hr/>
@@ -93,29 +126,41 @@
           <li>
               <ol type='a'>
                   <li>
-                  Period of residence in the Grama Niladhari Division
+                  Period of residence in the Grama Niladhari Division:
+                  <span class="answer-normal">%%periodOfResidence%%</span>
                   </li>
                   <hr/>
                   <li>
-                      Nature of other evidences in proof of the period of residence
+                      Nature of other evidences in proof of the period of residence:
+                      <span class="answer-normal">
+                          National Identity Card
+                      </span>
                   </li>
                   <hr/>
                   <li>
                       Whether the applicant has been convicted by a Court of Law?
+                      <span class="answer-normal">%%convictedByCourtOfLaw%%</span>
                   </li>
                   <hr/>
                   <li>
                       Whether he/she has taken an interest in public activities social service work, Community Work etc.?
+                      <div>
+                        %%takenPartInPublicActivities%%
+                      </div>
                   </li>
                   <hr/>
                   <li>
-                      His/her character
+                      His/her character:
+                      <span class="answer-normal">%%character%%</span>
                   </li>
                   <hr/>
               </ol>
           </li>
           <li id='remarks'>
-              Remarks
+              Remarks:
+              <div>
+                %%remark%%
+              </div>
           </li>
           <hr/>
           <div>
@@ -130,7 +175,7 @@
               </div>
           </div>
           <div>
-              Date:
+              Date:   %%date%%
           </div>
       </ol>
     </body>
