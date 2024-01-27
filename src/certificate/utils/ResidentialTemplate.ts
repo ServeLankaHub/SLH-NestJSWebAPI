@@ -1,11 +1,17 @@
+import * as path from 'path';
 import { PdfField, PdfFiller, PdfTemplate } from 'simple-pdf-generator';
 
 @PdfTemplate({
-    templatePath:
-        '/Users/macbook/serve-lanka-hub/SLH-NestJSWebAPI/src/certificate/utils/residentialCertificateTemplate.html',
+    templatePath: path.join(
+        process.cwd(),
+        '/src/certificate/utils/residentialCertificateTemplate.html',
+    ),
     includes: [
         {
-            path: '/Users/macbook/serve-lanka-hub/SLH-NestJSWebAPI/src/certificate/utils/template.css',
+            path: path.join(
+                process.cwd(),
+                '/src/certificate/utils/template.css',
+            ),
         },
     ],
 })
