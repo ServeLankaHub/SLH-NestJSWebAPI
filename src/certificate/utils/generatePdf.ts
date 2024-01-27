@@ -41,7 +41,7 @@ export const generatePdf = async (data: ResidentialCertificateDataI) => {
 
     const templateFile = `residentialCert-${formattedDate}.pdf`;
 
-    const fullTemplatePath = path.join(process.env.TEMPLATE_PATH, templateFile);
+    const fullTemplatePath = path.join(process.env.DOWNLOAD_PATH, templateFile);
 
     const generatedDoc = await doc.fill(fullTemplatePath);
     if (generatedDoc) {

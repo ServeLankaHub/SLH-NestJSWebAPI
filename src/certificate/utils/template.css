@@ -1,0 +1,32 @@
+.content-center {
+  text-align: center;
+}
+
+body {
+  font-family: serif;
+}
+
+h1 {
+  font-size: 20px;
+}
+li {
+  padding-block: 10px;
+}
+hr {
+  margin-left: -100px;
+  margin-right: -100px;
+}
+#religion {
+  padding-left: 350px;
+}
+#civilStatus {
+  padding-left: 470px;
+}
+#remarks {
+  padding-bottom: 300px;
+}
+#gnId {
+  margin-left: 60%;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}

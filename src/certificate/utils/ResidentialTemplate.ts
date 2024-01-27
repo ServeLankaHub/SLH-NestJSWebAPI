@@ -3,6 +3,11 @@ import { PdfField, PdfFiller, PdfTemplate } from 'simple-pdf-generator';
 @PdfTemplate({
     templatePath:
         '/Users/macbook/serve-lanka-hub/SLH-NestJSWebAPI/src/certificate/utils/residentialCertificateTemplate.html',
+    includes: [
+        {
+            path: '/Users/macbook/serve-lanka-hub/SLH-NestJSWebAPI/src/certificate/utils/template.css',
+        },
+    ],
 })
 export class ResidentialTemplate extends PdfFiller {
     @PdfField()
