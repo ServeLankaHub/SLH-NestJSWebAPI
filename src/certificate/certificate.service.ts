@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { ResidentialCertificateDataI } from './interfaces/residentialCertificateData';
 import { generatePdf } from './utils/generatePdf';
+import { ResidentialCertificateData } from './dto/ResidentialCertificateData';
 
 @Injectable()
 export class CertificateService {
     async residentialCertificate(
-        data: ResidentialCertificateDataI,
+        data: ResidentialCertificateData,
     ): Promise<void> {
-        generatePdf();
+        generatePdf(data);
     }
 }
