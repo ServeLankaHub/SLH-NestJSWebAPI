@@ -13,18 +13,15 @@ export const generatePdf = async (data: ResidentialCertificateData) => {
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
 
-    const residenceDate = new Date(data.dateOfResidence);
-
     doc.nic = data.nic;
     doc.fullName = data.fullName;
     doc.address = data.address;
-    doc.dob = data.dob;
     doc.age = data.age;
     doc.civilStatus = data.civilStatus;
     doc.isSriLankan = Boolean(data.isSriLankan) ? 'yes' : 'no';
     doc.religion = data.religion;
     doc.occupation = data.occupation;
-    doc.periodOfResidence = year - residenceDate.getFullYear();
+    doc.periodOfResidence = data.periodOfResidence;
     doc.noOfElectoralRegister = data.noOfElectoralRegister;
     doc.nameOfFather = data.nameOfFather;
     doc.addressOfFather = data.addressOfFather;

@@ -22,11 +22,6 @@ export class ResidentialCertificateData {
 
     @ApiProperty()
     @IsNotEmpty()
-    @IsString()
-    dob: string;
-
-    @ApiProperty()
-    @IsNotEmpty()
     @IsNumber()
     age: number;
 
@@ -51,7 +46,7 @@ export class ResidentialCertificateData {
     @ApiProperty()
     @IsNotEmpty()
     @IsString()
-    dateOfResidence: string;
+    periodOfResidence: string;
 
     @ApiProperty()
     @IsNotEmpty()
