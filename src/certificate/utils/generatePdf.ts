@@ -22,7 +22,7 @@ export const generatePdf = async (data: ResidentialCertificateData) => {
     doc.religion = data.religion;
     doc.occupation = data.occupation;
     doc.periodOfResidence = data.periodOfResidence;
-    doc.noOfElectoralRegister = data.noOfElectoralRegister;
+    doc.electoralRegisterNumber = data.electoralRegisterNumber;
     doc.nameOfFather = data.nameOfFather;
     doc.addressOfFather = data.addressOfFather;
     doc.purposeOfCertificate = data.purposeOfCertificate;
@@ -31,7 +31,7 @@ export const generatePdf = async (data: ResidentialCertificateData) => {
     doc.district = data.district;
     doc.divisionalSecretariatsDiv = data.divisionalSecretariatsDiv;
     doc.date = `${year}-${month}-${day}`;
-    doc.sex = data.sex;
+    doc.gender = data.gender;
     doc.sinceWhenKnown = data.sinceWhenKnown;
     doc.personallyKnown = Boolean(data.personallyKnown) ? 'yes' : 'no';
     doc.convictedByCourtOfLaw = Boolean(data.convictedByCourtOfLaw)

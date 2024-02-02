@@ -50,8 +50,8 @@ export class ResidentialCertificateData {
 
     @ApiProperty()
     @IsNotEmpty()
-    @IsNumber()
-    noOfElectoralRegister: number;
+    @IsString()
+    electoralRegisterNumber: string;
 
     @ApiProperty()
     @IsNotEmpty()
@@ -95,7 +95,7 @@ export class ResidentialCertificateData {
     @ApiProperty()
     @IsNotEmpty()
     @IsString()
-    sex: string;
+    gender: string;
 
     @ApiProperty()
     @IsNotEmpty()

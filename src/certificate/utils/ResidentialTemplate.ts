@@ -35,7 +35,7 @@ export class ResidentialTemplate extends PdfFiller {
     @PdfField()
     periodOfResidence: string;
     @PdfField()
-    noOfElectoralRegister: number;
+    electoralRegisterNumber: string;
     @PdfField()
     nameOfFather: string;
     @PdfField()
@@ -53,7 +53,7 @@ export class ResidentialTemplate extends PdfFiller {
     @PdfField()
     date: string;
     @PdfField()
-    sex: string;
+    gender: string;
     @PdfField()
     sinceWhenKnown: string;
     @PdfField()
