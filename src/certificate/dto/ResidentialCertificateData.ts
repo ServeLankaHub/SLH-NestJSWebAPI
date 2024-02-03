@@ -22,11 +22,6 @@ export class ResidentialCertificateData {
 
     @ApiProperty()
     @IsNotEmpty()
-    @IsString()
-    dob: string;
-
-    @ApiProperty()
-    @IsNotEmpty()
     @IsNumber()
     age: number;
 
@@ -51,12 +46,12 @@ export class ResidentialCertificateData {
     @ApiProperty()
     @IsNotEmpty()
     @IsString()
-    dateOfResidence: string;
+    periodsOfResidence: string;
 
     @ApiProperty()
     @IsNotEmpty()
-    @IsNumber()
-    noOfElectoralRegister: number;
+    @IsString()
+    electoralRegisterNumber: string;
 
     @ApiProperty()
     @IsNotEmpty()
@@ -100,7 +95,7 @@ export class ResidentialCertificateData {
     @ApiProperty()
     @IsNotEmpty()
     @IsString()
-    sex: string;
+    gender: string;
 
     @ApiProperty()
     @IsNotEmpty()
@@ -130,5 +125,5 @@ export class ResidentialCertificateData {
     @ApiProperty()
     @IsNotEmpty()
     @IsString()
-    remark: string;
+    remarks: string;
 }

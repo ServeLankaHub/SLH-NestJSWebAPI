@@ -23,8 +23,6 @@ export class ResidentialTemplate extends PdfFiller {
     @PdfField()
     address: string;
     @PdfField()
-    dob: string;
-    @PdfField()
     age: number;
     @PdfField()
     civilStatus: string;
@@ -35,9 +33,9 @@ export class ResidentialTemplate extends PdfFiller {
     @PdfField()
     occupation: string;
     @PdfField()
-    periodOfResidence: number;
+    periodOfResidence: string;
     @PdfField()
-    noOfElectoralRegister: number;
+    electoralRegisterNumber: string;
     @PdfField()
     nameOfFather: string;
     @PdfField()
@@ -55,7 +53,7 @@ export class ResidentialTemplate extends PdfFiller {
     @PdfField()
     date: string;
     @PdfField()
-    sex: string;
+    gender: string;
     @PdfField()
     sinceWhenKnown: string;
     @PdfField()

@@ -13,19 +13,16 @@ export const generatePdf = async (data: ResidentialCertificateData) => {
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
 
-    const residenceDate = new Date(data.dateOfResidence);
-
     doc.nic = data.nic;
     doc.fullName = data.fullName;
     doc.address = data.address;
-    doc.dob = data.dob;
     doc.age = data.age;
     doc.civilStatus = data.civilStatus;
     doc.isSriLankan = Boolean(data.isSriLankan) ? 'yes' : 'no';
     doc.religion = data.religion;
     doc.occupation = data.occupation;
-    doc.periodOfResidence = year - residenceDate.getFullYear();
-    doc.noOfElectoralRegister = data.noOfElectoralRegister;
+    doc.periodOfResidence = data.periodsOfResidence;
+    doc.electoralRegisterNumber = data.electoralRegisterNumber;
     doc.nameOfFather = data.nameOfFather;
     doc.addressOfFather = data.addressOfFather;
     doc.purposeOfCertificate = data.purposeOfCertificate;
@@ -34,7 +31,7 @@ export const generatePdf = async (data: ResidentialCertificateData) => {
     doc.district = data.district;
     doc.divisionalSecretariatsDiv = data.divisionalSecretariatsDiv;
     doc.date = `${year}-${month}-${day}`;
-    doc.sex = data.sex;
+    doc.gender = data.gender;
     doc.sinceWhenKnown = data.sinceWhenKnown;
     doc.personallyKnown = Boolean(data.personallyKnown) ? 'yes' : 'no';
     doc.convictedByCourtOfLaw = Boolean(data.convictedByCourtOfLaw)
@@ -44,7 +41,7 @@ export const generatePdf = async (data: ResidentialCertificateData) => {
         ? 'yes'
         : 'no';
     doc.character = data.character;
-    doc.remark = data.remark;
+    doc.remark = data.remarks;
 
     const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day
         .toString()
