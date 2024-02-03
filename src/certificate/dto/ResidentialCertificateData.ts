@@ -46,7 +46,7 @@ export class ResidentialCertificateData {
     @ApiProperty()
     @IsNotEmpty()
     @IsString()
-    periodOfResidence: string;
+    periodsOfResidence: string;
 
     @ApiProperty()
     @IsNotEmpty()
@@ -125,5 +125,5 @@ export class ResidentialCertificateData {
     @ApiProperty()
     @IsNotEmpty()
     @IsString()
-    remark: string;
+    remarks: string;
 }

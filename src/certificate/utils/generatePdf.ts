@@ -21,7 +21,7 @@ export const generatePdf = async (data: ResidentialCertificateData) => {
     doc.isSriLankan = Boolean(data.isSriLankan) ? 'yes' : 'no';
     doc.religion = data.religion;
     doc.occupation = data.occupation;
-    doc.periodOfResidence = data.periodOfResidence;
+    doc.periodOfResidence = data.periodsOfResidence;
     doc.electoralRegisterNumber = data.electoralRegisterNumber;
     doc.nameOfFather = data.nameOfFather;
     doc.addressOfFather = data.addressOfFather;
@@ -41,7 +41,7 @@ export const generatePdf = async (data: ResidentialCertificateData) => {
         ? 'yes'
         : 'no';
     doc.character = data.character;
-    doc.remark = data.remark;
+    doc.remark = data.remarks;
 
     const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day
         .toString()
