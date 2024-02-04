@@ -6,7 +6,12 @@ import { ResidentialCertificateData } from './dto/ResidentialCertificateData';
 export class CertificateService {
     async residentialCertificate(
         data: ResidentialCertificateData,
-    ): Promise<void> {
-        generatePdf(data);
+    ): Promise<string> {
+        const isGenerated = await generatePdf(data);
+        if (isGenerated) {
+            return 'PDF generated successfully';
+        } else {
+            throw new Error('Failed to generate PDF');
+        }
     }
 }

@@ -7,7 +7,7 @@ export class CertificateController {
     constructor(private certificateService: CertificateService) {}
 
     @Post('residential-certificate')
-    deliveryStatus(@Body() data: ResidentialCertificateData): Promise<void> {
+    deliveryStatus(@Body() data: ResidentialCertificateData): Promise<string> {
         return this.certificateService.residentialCertificate(data);
     }
 }
