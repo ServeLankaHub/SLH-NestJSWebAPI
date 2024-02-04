@@ -1,11 +1,7 @@
 import { HttpStatus, Injectable } from '@nestjs/common';
 import { generatePdf } from './utils/generatePdf';
 import { ResidentialCertificateData } from './dto/ResidentialCertificateData';
-
-type Response = {
-    status: HttpStatus;
-    message: string;
-};
+import { Response } from './types/Response';
 
 @Injectable()
 export class CertificateService {
